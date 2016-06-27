@@ -13,6 +13,7 @@
 		943C27F21D218E9700CCF57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943C27F01D218E9700CCF57C /* Main.storyboard */; };
 		943C27F41D218E9700CCF57C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943C27F31D218E9700CCF57C /* Assets.xcassets */; };
 		943C27F71D218E9700CCF57C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943C27F51D218E9700CCF57C /* LaunchScreen.storyboard */; };
+		943C28001D218EB800CCF57C /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943C27FF1D218EB800CCF57C /* NotificationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		943C27F31D218E9700CCF57C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943C27F61D218E9700CCF57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943C27F81D218E9700CCF57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943C27FE1D218EB800CCF57C /* NotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationView.h; path = ../NotificationView.h; sourceTree = "<group>"; };
+		943C27FF1D218EB800CCF57C /* NotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationView.m; path = ../NotificationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,11 @@
 		943C27E61D218E9600CCF57C /* CustomNotificationView */ = {
 			isa = PBXGroup;
 			children = (
+				943C28031D218EE300CCF57C /* Model */,
+				943C28021D218EDE00CCF57C /* Views */,
+				943C28011D218ED400CCF57C /* Controllers */,
+				943C27FE1D218EB800CCF57C /* NotificationView.h */,
+				943C27FF1D218EB800CCF57C /* NotificationView.m */,
 				943C27EA1D218E9600CCF57C /* AppDelegate.h */,
 				943C27EB1D218E9600CCF57C /* AppDelegate.m */,
 				943C27ED1D218E9600CCF57C /* ViewController.h */,
@@ -77,6 +85,27 @@
 				943C27E81D218E9600CCF57C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		943C28011D218ED400CCF57C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		943C28021D218EDE00CCF57C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		943C28031D218EE300CCF57C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +181,7 @@
 				943C27EF1D218E9600CCF57C /* ViewController.m in Sources */,
 				943C27EC1D218E9600CCF57C /* AppDelegate.m in Sources */,
 				943C27E91D218E9600CCF57C /* main.m in Sources */,
+				943C28001D218EB800CCF57C /* NotificationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

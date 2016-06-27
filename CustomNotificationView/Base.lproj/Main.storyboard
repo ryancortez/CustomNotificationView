@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mMf-aj-nfL">
+                                <rect key="frame" x="20" y="113" width="560" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="xEL-J5-YjD"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First Segment"/>
+                                    <segment title="Second Segment"/>
+                                </segments>
+                            </segmentedControl>
+                            <tabBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="C3H-sE-cof">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="hCc-7N-jfQ"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="MAY-kh-05m"/>
+                                    <tabBarItem systemItem="more" id="mmL-Jo-VoW"/>
+                                </items>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdy-kp-LUJ">
+                                <rect key="frame" x="20" y="177" width="560" height="135"/>
+                                <color key="backgroundColor" red="0.36124293508404126" green="0.57939018991845492" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="4gb-i6-O1m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Blue Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9X-fX-bVJ">
+                                <rect key="frame" x="20" y="344" width="560" height="135"/>
+                                <color key="backgroundColor" red="1" green="0.62044137929999998" blue="0.23773339939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Orange Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mMf-aj-nfL" firstAttribute="leading" secondItem="Pdy-kp-LUJ" secondAttribute="leading" id="3sU-gb-oKO"/>
+                            <constraint firstItem="Pdy-kp-LUJ" firstAttribute="top" secondItem="mMf-aj-nfL" secondAttribute="bottom" constant="36" id="68w-hf-N1e"/>
+                            <constraint firstItem="mMf-aj-nfL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6c9-in-3XO"/>
+                            <constraint firstItem="u9X-fX-bVJ" firstAttribute="centerX" secondItem="C3H-sE-cof" secondAttribute="centerX" id="7lc-LT-gHQ"/>
+                            <constraint firstItem="mMf-aj-nfL" firstAttribute="trailing" secondItem="Pdy-kp-LUJ" secondAttribute="trailing" id="Gya-Ri-Gq6"/>
+                            <constraint firstItem="Pdy-kp-LUJ" firstAttribute="trailing" secondItem="u9X-fX-bVJ" secondAttribute="trailing" id="IVX-3E-KWy"/>
+                            <constraint firstItem="C3H-sE-cof" firstAttribute="top" secondItem="u9X-fX-bVJ" secondAttribute="bottom" constant="72" id="bWy-Rp-veE"/>
+                            <constraint firstItem="C3H-sE-cof" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bs3-5D-mPq"/>
+                            <constraint firstItem="Pdy-kp-LUJ" firstAttribute="leading" secondItem="u9X-fX-bVJ" secondAttribute="leading" id="euY-yj-nEh"/>
+                            <constraint firstItem="C3H-sE-cof" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ez1-b8-Fa7"/>
+                            <constraint firstAttribute="trailing" secondItem="C3H-sE-cof" secondAttribute="trailing" id="fKy-OI-g0V"/>
+                            <constraint firstItem="mMf-aj-nfL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="grg-VU-ero"/>
+                            <constraint firstItem="u9X-fX-bVJ" firstAttribute="top" secondItem="Pdy-kp-LUJ" secondAttribute="bottom" constant="32" id="kcZ-O3-nMe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="453" y="374"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.72625615040000002" blue="0.35007532460000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
